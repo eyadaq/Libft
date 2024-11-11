@@ -3,19 +3,19 @@
 #                                                         :::      ::::::::    #
 #    Makefile                                           :+:      :+:    :+:    #
 #                                                     +:+ +:+         +:+      #
-#    By: eaqrabaw <marvin@42.fr>                    +#+  +:+       +#+         #
+#    By: eaqrabaw <eaqrabaw@student.42amman.com>    +#+  +:+       +#+         #
 #                                                 +#+#+#+#+#+   +#+            #
 #    Created: 2024/09/03 23:21:58 by eaqrabaw          #+#    #+#              #
-#    Updated: 2024/09/03 23:22:05 by eaqrabaw         ###   ########.fr        #
+#    Updated: 2024/11/11 21:41:18 by eaqrabaw         ###   ########.fr        #
 #                                                                              #
 # **************************************************************************** #
 
-SRC			= ft_memset ft_bzero ft_memcpy ft_memmove ft_memchr ft_memcmp ft_strlen ft_isalpha ft_isdigit ft_isalnum ft_isascii ft_isprint ft_toupper ft_tolower ft_strchr ft_strrchr ft_strncmp ft_strlcpy ft_strlcat ft_strnstr ft_atoi ft_calloc ft_strdup ft_substr ft_strjoin ft_strtrim ft_split ft_itoa ft_strmapi ft_putchar_fd ft_putstr_fd ft_putendl_fd ft_putnbr_fd ft_striteri
-B_SRC		= ft_lstnew ft_lstadd_front ft_lstsize ft_lstlast ft_lstadd_back ft_lstdelone ft_lstclear ft_lstiter ft_lstmap
+SRC			= ft_memset ft_bzero ft_memcpy ft_memmove ft_memchr ft_memcmp ft_strlen ft_isalpha ft_isdigit ft_isalnum ft_isascii ft_isprint ft_toupper \
+ft_tolower ft_strchr ft_strrchr ft_strncmp ft_strlcpy ft_strlcat ft_strnstr ft_atoi ft_calloc ft_strdup ft_substr ft_strjoin ft_strtrim ft_split ft_itoa \
+ft_strmapi ft_putchar_fd ft_putstr_fd ft_putendl_fd ft_putnbr_fd ft_striteri ft_lstnew ft_lstadd_front ft_lstsize ft_lstlast ft_lstadd_back ft_lstdelone \
+ft_lstclear ft_lstiter ft_lstmap get_next_line ft_putunsigned ft_putstr_printf ft_putptr ft_printf ft_puthexa
 SRCS		= $(addsuffix .c, ${SRC})
-B_SRCS		= $(addsuffix .c, ${B_SRC})
 OBJS		= ${SRCS:.c=.o}
-B_OBJS		= ${B_SRCS:.c=.o}
 NAME		= libft.a
 CC			= cc
 RM			= rm -f
@@ -26,11 +26,9 @@ all: $(NAME)
 	${CC} ${CFLAGS} -c $< -o $@
 $(NAME): ${OBJS}
 	${AR} ${NAME} ${OBJS}
-bonus: $(B_OBJS) $(NAME)
-	${AR} ${NAME} ${B_OBJS}
 clean:
-	${RM} ${OBJS} ${B_OBJS}
+	${RM} ${OBJS}
 fclean: clean
 	${RM} ${NAME}
 re: fclean all
-.PHONY:	all bonus clean fclean re
+.PHONY:	all clean fclean re

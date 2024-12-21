@@ -6,7 +6,7 @@
 /*   By: eaqrabaw <eaqrabaw@student.42amman.com>    +#+  +:+       +#+        */
 /*                                                +#+#+#+#+#+   +#+           */
 /*   Created: 2024/09/11 03:21:56 by eaqrabaw          #+#    #+#             */
-/*   Updated: 2024/11/11 20:26:29 by eaqrabaw         ###   ########.fr       */
+/*   Updated: 2024/11/19 11:01:29 by eaqrabaw         ###   ########.fr       */
 /*                                                                            */
 /* ************************************************************************** */
 
@@ -14,8 +14,6 @@
 # define FT_PRINTF_H
 
 # include "libft.h"
-# include <stdarg.h>
-# include <unistd.h>
 
 int	ft_printf(const char *var, ...);
 int	ft_putunsigned(unsigned int digit);

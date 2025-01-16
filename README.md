@@ -22,6 +22,7 @@ These mimic the behavior of standard C library functions:
 - `ft_strncpy`: Copies `n` characters from source to destination.
 - `ft_strdup`: Allocates memory and duplicates a string.
 - `ft_atoi`: Converts a string to an integer.
+- `ft_atol`: Converts a string to long.
 - `ft_isalpha`: Checks if a character is alphabetic.
 - `ft_isdigit`: Checks if a character is numeric.
 - `ft_isalnum`: Checks if a character is alphanumeric.

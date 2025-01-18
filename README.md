@@ -1,3 +1,5 @@
+![Libft Logo](libftm.png)
+
 # Libft: A Custom Standard C Library
 
 **Libft** is a foundational project from the 42 curriculum where students build their own custom implementation of essential C standard library functions. This project enhances understanding of low-level programming, memory management, and the inner workings of commonly used C functions.
@@ -79,4 +81,4 @@ Support for linked list manipulation:
 
 Libft is the cornerstone of many 42 projects, providing a custom, extensible library that encourages code reuse and modularity.
 
-![Libft Logo](libftm.png)
+

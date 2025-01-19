@@ -1,23 +1,26 @@
 /* ************************************************************************** */
 /*                                                                            */
 /*                                                        :::      ::::::::   */
-/*   ft_printf.h                                        :+:      :+:    :+:   */
+/*   ft_freedouble.c                                    :+:      :+:    :+:   */
 /*                                                    +:+ +:+         +:+     */
 /*   By: eaqrabaw <eaqrabaw@student.42amman.com>    +#+  +:+       +#+        */
 /*                                                +#+#+#+#+#+   +#+           */
-/*   Created: 2024/09/11 03:21:56 by eaqrabaw          #+#    #+#             */
-/*   Updated: 2024/11/19 11:01:29 by eaqrabaw         ###   ########.fr       */
+/*   Created: 2024/12/27 23:59:50 by eaqrabaw          #+#    #+#             */
+/*   Updated: 2024/12/28 00:00:09 by eaqrabaw         ###   ########.fr       */
 /*                                                                            */
 /* ************************************************************************** */
 
-#ifndef FT_PRINTF_H
-# define FT_PRINTF_H
+#include "../headers/libft.h"
 
-# include "libft.h"
+void	ft_free_double(char **a)
+{
+	int	i;
 
-int	ft_printf(const char *var, ...);
-int	ft_putunsigned(unsigned int digit);
-int	ft_putstr_printf(char *ptr);
-int	ft_putptr(void *ptr);
-int	ft_puthexa(unsigned int hexa, char x);
-#endif
+	i = 0;
+	while (a[i])
+	{
+		free(a[i]);
+		i++;
+	}
+	free(a);
+}

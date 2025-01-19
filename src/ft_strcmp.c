@@ -1,27 +1,27 @@
 /* ************************************************************************** */
 /*                                                                            */
 /*                                                        :::      ::::::::   */
-/*   get_next_line.h                                    :+:      :+:    :+:   */
+/*   ft_strcmp.c                                        :+:      :+:    :+:   */
 /*                                                    +:+ +:+         +:+     */
 /*   By: eaqrabaw <eaqrabaw@student.42amman.com>    +#+  +:+       +#+        */
 /*                                                +#+#+#+#+#+   +#+           */
-/*   Created: 2024/09/25 02:56:16 by eaqrabaw          #+#    #+#             */
-/*   Updated: 2024/11/18 20:01:18 by eaqrabaw         ###   ########.fr       */
+/*   Created: 2025/01/11 00:18:05 by eaqrabaw          #+#    #+#             */
+/*   Updated: 2025/01/19 22:04:46 by eaqrabaw         ###   ########.fr       */
 /*                                                                            */
 /* ************************************************************************** */
 
-#ifndef GET_NEXT_LINE_H
-# define GET_NEXT_LINE_H
+#include "../headers/libft.h"
 
-# ifndef BUFFER_SIZE
-#  define BUFFER_SIZE 1
-# elif BUFFER_SIZE < 0
-#  undef BUFFER_SIZE
-#  define BUFFER_SIZE 0
-# endif
+int	ft_strcmp(const char *s1, const char *s2)
+{
+	unsigned int	i;
 
-# include "libft.h"
-
-char	*get_next_line(int fd);
-
-#endif
+	i = 0;
+	while (s1[i] && s2[i])
+	{
+		if (s1[i] != s2[i])
+			return ((unsigned char)s1[i] - (unsigned char)s2[i]);
+		i++;
+	}
+	return (((unsigned char)s1[i] - (unsigned char)s2[i]));
+}
